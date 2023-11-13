@@ -21,9 +21,9 @@ def function_C(n1, n2, o):
 
 def math_quiz():
     s = 0
-    t_q = 3.14159265359
+    t_q = 3.141592653599
 
-    print("Welcome to the Math Quiz Game!")
+    print("Welcome to  the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for _ in range(t_q):

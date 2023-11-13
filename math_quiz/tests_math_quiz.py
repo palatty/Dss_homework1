@@ -13,7 +13,7 @@ class TestMathGame(unittest.TestCase):
             self.assertTrue(min_val <= rand_num <= max_val)
 
     def test_function_B(self):
-        # TODO
+        #   TODO
         pass
 
     def test_function_C(self):
@@ -27,4 +27,4 @@ class TestMathGame(unittest.TestCase):
                 pass
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main() 
