@@ -31,15 +31,15 @@ def get_operation():
     return random.choice(['+', '-', '*'])
 
 
-def Operation(Num_1, Num_2, o):
+def compute(num_1, num_2, op):
     """
     This function takes three parameters 
     and computes the necessary operation 
 
     Parameters:
-    Integer (Num_1)
-    Integer (Num_2)
-    string (o)
+    Integer (num_1)
+    Integer (num_2)
+    string (op)
 
     Return:
     String (p)
@@ -47,13 +47,13 @@ def Operation(Num_1, Num_2, o):
 
     """
 
-    p = f"{Num_1} {o} {Num_2}"
-    if o == '+': 
-        a = Num_1 + Num_2
-    elif o == '-': 
-        a = Num_1 - Num_2
+    p = f"{num_1} {op} {num_2}"
+    if op == '+': 
+        a = num_1 + num_2
+    elif op == '-': 
+        a = num_1 - num_2
     else: 
-        a = Num_1 * Num_2
+        a = num_1 * num_2
     return p,a
 
 def math_quiz():
@@ -73,10 +73,10 @@ def math_quiz():
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for _ in range(t_q):
-        Num_1 = get_random_integer(1, 10)
-        Num_2 = get_random_integer(1, 54)
-        o = get_operation()
-        question, result = Operation(Num_1, Num_2, o)
+        num_1 = get_random_integer(1, 10)
+        num_2 = get_random_integer(1, 54)
+        op = get_operation()
+        question, result = compute(num_1, num_2, op)
         print(f"\nQuestion: {question}")
         try:
             userinput = input("Your answer: ")
@@ -85,10 +85,6 @@ def math_quiz():
             print("Invalid input. Please enter a valid number.")
         else:
             print(f"Valid input! You entered: {userinput}")
-        
-    
-
-        
 
         if userinput == result:
             print("Correct! You earned a point.")
