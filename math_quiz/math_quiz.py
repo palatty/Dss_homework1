@@ -1,19 +1,14 @@
 import random
 
-
 def get_random_integer(min, max):
     """
-
     This function takes two parameters min and max 
     and return a random integer between min and max 
-
     Parameter:
     integer (min)
     integer (max)
-
     Return:
     integer
-
     """
     return random.randint(min, max)
 
@@ -21,10 +16,8 @@ def get_random_integer(min, max):
 def get_operation():
     """ 
     This function chooses an operation among '+' '-' and '*'
-    
     Parameters:
     None
-
     Return:
     string
     """
@@ -35,18 +28,14 @@ def compute(num_1, num_2, op):
     """
     This function takes three parameters 
     and computes the necessary operation 
-
     Parameters:
     Integer (num_1)
     Integer (num_2)
     string (op)
-
     Return:
     String (p)
     Integer (a)
-
     """
-
     p = f"{num_1} {op} {num_2}"
     if op == '+': 
         a = num_1 + num_2
@@ -74,7 +63,7 @@ def math_quiz():
 
     for _ in range(t_q):
         num_1 = get_random_integer(1, 10)
-        num_2 = get_random_integer(1, 54)
+        num_2 = get_random_integer(1, 5)
         op = get_operation()
         question, result = compute(num_1, num_2, op)
         print(f"\nQuestion: {question}")
@@ -94,5 +83,5 @@ def math_quiz():
 
     print(f"\nGame over! Your score is: {Score}/{t_q}")
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     math_quiz()
